@@ -1,16 +1,65 @@
+:root {
+  /* Color Palette */
+  --color-light: #B9F6CA;
+  --color-primary: #69F0AE;
+  --color-accent: #00E676;
+  --color-dark: #00C853;
+}
 
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
+  cursor: url("assets/img/custom-cursor.png"), auto;
+}
+
+.parallax {
+  background-image: url("assets/img/parallax-bg.jpg");
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dark-mode {
+  --color-light: #333;
+  --color-primary: #555;
+  --color-accent: #777;
+  --color-dark: #000;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode #header {
+  background: #000;
+}
+
+.dark-mode a {
+  color: var(--color-primary);
+}
+
+.dark-mode a:hover {
+  color: var(--color-accent);
 }
 
 a {
-  color: #149ddd;
+  color: var(--color-primary);
   text-decoration: none;
 }
 
 a:hover {
-  color: #37b3ed;
+  color: var(--color-accent);
   text-decoration: none;
 }
 
@@ -33,7 +82,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #149ddd;
+  background: var(--color-dark);
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -47,7 +96,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #2eafec;
+  background: var(--color-accent);
   color: #fff;
 }
 
@@ -55,9 +104,11 @@ h6 {
   visibility: visible;
   opacity: 1;
 }
-.font-weight{
+
+.font-weight {
   font-weight: bold !important;
 }
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -69,9 +120,8 @@ h6 {
   width: 300px;
   transition: all ease-in-out 0.5s;
   z-index: 9997;
-  transition: all 0.5s;
   padding: 0 15px;
-  background: #040b14;
+  background: #080808;
   overflow-y: auto;
 }
 
@@ -79,7 +129,7 @@ h6 {
   margin: 15px auto;
   display: block;
   width: 120px;
-  border: 8px solid #2c2f3f;
+  border: 8px solid #020202;
 }
 
 #header .profile h1 {
@@ -87,7 +137,6 @@ h6 {
   margin: 0;
   padding: 0;
   font-weight: 600;
-  -moz-text-align-last: center;
   text-align-last: center;
   font-family: "Poppins", sans-serif;
 }
@@ -114,7 +163,7 @@ h6 {
 }
 
 #header .profile .social-links a:hover {
-  background: #149ddd;
+  background: var(--color-primary);
   color: #fff;
   text-decoration: none;
 }
@@ -148,7 +197,6 @@ h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-/* Desktop Navigation */
 .nav-menu {
   padding: 30px 0 0 0;
 }
@@ -187,14 +235,14 @@ h6 {
 .nav-menu .active:focus,
 .nav-menu li:hover>a {
   text-decoration: none;
-  color: #fff;
+  color: var(--color-light);
 }
 
 .nav-menu a:hover i,
 .nav-menu .active i,
 .nav-menu .active:focus i,
 .nav-menu li:hover>a i {
-  color: #149ddd;
+  color: var(--color-primary);
 }
 
 /* Mobile Navigation */
@@ -207,7 +255,7 @@ h6 {
   font-size: 24px;
   transition: all 0.4s;
   outline: none !important;
-  background-color: #149ddd;
+  background-color: var(--color-primary);
   color: #fff;
   width: 40px;
   height: 40px;
@@ -273,7 +321,7 @@ h6 {
   color: #fff;
   padding-bottom: 4px;
   letter-spacing: 1px;
-  border-bottom: 3px solid #149ddd;
+  border-bottom: 3px solid var(--color-primary);
 }
 
 @media (min-width: 1024px) {
@@ -317,7 +365,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #173b6c;
+  color: #00C853;
 }
 
 .section-title h2::after {
@@ -326,7 +374,8 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #149ddd;
+  color: #00C853;
+  background: var(--color-primary);
   bottom: 0;
   left: 0;
 }
@@ -362,7 +411,7 @@ section {
 .about .content ul i {
   font-size: 16px;
   margin-right: 5px;
-  color: #149ddd;
+  color: var(--color-primary);
   line-height: 0;
 }
 
@@ -385,7 +434,7 @@ section {
 .facts .count-box i {
   display: block;
   font-size: 44px;
-  color: #149ddd;
+  color: var(--color-primary);
   float: left;
   line-height: 0;
 }
@@ -422,7 +471,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Akills
+# Skills
 --------------------------------------------------------------*/
 .skills .progress {
   height: 60px;
@@ -455,7 +504,7 @@ section {
   width: 1px;
   height: 10px;
   transition: 0.9s;
-  background-color: #149ddd;
+  background-color: var(--color-primary);
 }
 
 /*--------------------------------------------------------------
@@ -551,11 +600,7 @@ section {
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  color: #149ddd;
-}
-
-.portfolio #portfolio-flters li:last-child {
-  margin-right: 0;
+  color: var(--color-primary);
 }
 
 .portfolio .portfolio-wrap {
@@ -594,13 +639,13 @@ section {
   color: #fff;
   font-size: 28px;
   text-align: center;
-  background: rgba(20, 157, 221, 0.75);
+  background: var(--color-primary);
   transition: 0.3s;
   width: 50%;
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  background: rgba(20, 157, 221, 0.95);
+  background: var(--color-dark);
 }
 
 .portfolio .portfolio-wrap .portfolio-links a+a {
@@ -641,11 +686,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #149ddd;
+  border: 1px solid var(--color-primary);
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #149ddd;
+  background-color: var(--color-primary);
 }
 
 .portfolio-details .portfolio-info {
@@ -699,10 +744,10 @@ section {
   justify-content: center;
   width: 54px;
   height: 54px;
-  background: #149ddd;
+  background: var(--color-primary);
   border-radius: 50%;
   transition: 0.5s;
-  border: 1px solid #149ddd;
+  border: 1px solid var(--color-primary);
 }
 
 .services .icon i {
@@ -716,7 +761,7 @@ section {
 }
 
 .services .icon-box:hover .icon i {
-  color: #149ddd;
+  color: var(--color-primary);
 }
 
 .services .title {
@@ -731,7 +776,7 @@ section {
 }
 
 .services .title a:hover {
-  color: #149ddd;
+  color: var(--color-primary);
 }
 
 .services .description {
@@ -825,11 +870,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #149ddd;
+  border: 1px solid var(--color-primary);
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #149ddd;
+  background-color: var(--color-primary);
 }
 
 /*--------------------------------------------------------------
@@ -848,11 +893,11 @@ section {
 
 .contact .info i {
   font-size: 20px;
-  color: #149ddd;
+  color: var(--color-dark);
   float: left;
   width: 44px;
   height: 44px;
-  background: #dff3fc;
+  background: var(--color-light);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -886,7 +931,7 @@ section {
 .contact .info .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #333;
+  background: var(--color-dark);
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -899,14 +944,14 @@ section {
 }
 
 .contact .info .social-links a:hover {
-  background: #149ddd;
+  background: var(--color-primary);
   color: #fff;
 }
 
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-  background: #149ddd;
+  background: var(--color-primary);
   color: #fff;
 }
 
@@ -965,7 +1010,7 @@ section {
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
+  border: 3px solid var(--color-accent);
   border-top-color: #eee;
   animation: animate-loading 1s linear infinite;
 }
@@ -994,7 +1039,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #149ddd;
+  background: var(--color-primary);
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -1003,7 +1048,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #37b3ed;
+  background: var(--color-dark);
 }
 
 @keyframes animate-loading {
@@ -1075,7 +1120,7 @@ section {
   bottom: 0;
   width: 300px;
   z-index: 9999;
-  background: #040b14;
+  background: var(--color-dark);
 }
 
 #footer .copyright {

@@ -8,7 +8,7 @@
   <title>Pratheek's Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
+  
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -31,6 +31,11 @@
 </head>
 
 <body>
+
+  <button class="dark-mode-toggle"
+    style="border: none; background: var(--color-primary); color: #fff; border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;">
+    <i class="bi bi-sun-fill"></i>
+  </button>
 
   <!-- ======= Mobile nav toggle button ======= -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
@@ -66,6 +71,8 @@
   </section><!-- End Hero -->
 
   <main id="main">
+
+    <section class="parallax"></section>
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -409,20 +416,20 @@
           <div class="col-lg-6 portfolio-item">
             <div class="portfolio-wrap">
               <class="img-fluid" alt="Apache Airflow Pipeline">
-              <div class="portfolio-info">
-                <h4>Automated Stock Data Pipeline</h4>
-                <p>
-                  Built an end-to-end ETL pipeline with Apache Airflow to ingest daily stock prices (AAPL, MSFT,
-                  GOOGL, AMZN) via Alpha Vantage API. Used Python &amp; Pandas for data transformation, designed
-                  resilient DAGs with robust error handling, and managed version control with Git.
-                </p>
-                <div class="portfolio-links">
-                  <a href="https://github.com/Prathikckulal/stock_market_airflow" target="_blank"
-                    title="View on GitHub">
-                    <i class="bx bx-link"></i>
-                  </a>
+                <div class="portfolio-info">
+                  <h4>Automated Stock Data Pipeline</h4>
+                  <p>
+                    Built an end-to-end ETL pipeline with Apache Airflow to ingest daily stock prices (AAPL, MSFT,
+                    GOOGL, AMZN) via Alpha Vantage API. Used Python &amp; Pandas for data transformation, designed
+                    resilient DAGs with robust error handling, and managed version control with Git.
+                  </p>
+                  <div class="portfolio-links">
+                    <a href="https://github.com/Prathikckulal/stock_market_airflow" target="_blank"
+                      title="View on GitHub">
+                      <i class="bx bx-link"></i>
+                    </a>
+                  </div>
                 </div>
-              </div>
             </div>
           </div>
 
@@ -430,20 +437,20 @@
           <div class="col-lg-6 portfolio-item">
             <div class="portfolio-wrap">
               <class="img-fluid" alt="Kafka Streaming">
-              <div class="portfolio-info">
-                <h4>Real‑Time Incremental Learning System</h4>
-                <p>
-                  Developed a Kafka‑based streaming pipeline (with Zookeeper &amp; Docker) to continuously ingest data
-                  and update ML models using online learning techniques, ensuring fault tolerance and scalable
-                  deployment.
-                </p>
-                <div class="portfolio-links">
-                  <a href="https://github.com/Prathikckulal/Real-Time-Incremental-Learning-Sysytem-" target="_blank"
-                    title="View on GitHub">
-                    <i class="bx bx-link"></i>
-                  </a>
+                <div class="portfolio-info">
+                  <h4>Real‑Time Incremental Learning System</h4>
+                  <p>
+                    Developed a Kafka‑based streaming pipeline (with Zookeeper &amp; Docker) to continuously ingest data
+                    and update ML models using online learning techniques, ensuring fault tolerance and scalable
+                    deployment.
+                  </p>
+                  <div class="portfolio-links">
+                    <a href="https://github.com/Prathikckulal/Real-Time-Incremental-Learning-Sysytem-" target="_blank"
+                      title="View on GitHub">
+                      <i class="bx bx-link"></i>
+                    </a>
+                  </div>
                 </div>
-              </div>
             </div>
           </div>
 
